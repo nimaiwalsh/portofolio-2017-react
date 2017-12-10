@@ -1,30 +1,59 @@
 import React, { Component } from 'react';
 import SearchBar from './containers/SearchBar';
-import { Container, Grid, Header } from 'semantic-ui-react';
+import {
+  Button,
+  Container,
+  Divider,
+  Grid,
+  Header,
+  Icon,
+  Image,
+  List,
+  Menu,
+  Segment,
+  Visibility
+} from 'semantic-ui-react';
+import FixedMenu from './components/FixedMenu';
+import TopMenu from './components/TopMenu';
+import './App.css';
 
 class App extends Component {
-  style = {
-    h1: {
-      marginTop: '2em',
-    },
+  constructor(props) {
+    super(props)
+    this.state = {}
   }
+
+  hideFixedMenu = () => this.setState({ visibleMenu: false });
+  showFixedMenu = () => this.setState({ visibleMenu: true });
+  // style = {
+  //   h1: {
+  //     marginTop: '2em',
+  //   },
+  // }
   render() {
+    const { visibleMenu } = this.state;
     return (
       <div className="App">
-        <Container>
-          <Grid>
-            <Grid.Row>
-              <Grid.Column textAlign="center"> 
-                <Header as="h1" style={this.style.h1} color="blue">Weather forecast</Header>     
-              </Grid.Column>
-            </Grid.Row>
-            <Grid.Row centered>
-              <Grid.Column style={{maxWidth: 500}}>      
-                <SearchBar />
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Container>
+        { visibleMenu ? <FixedMenu /> : null }
+
+        <Visibility
+          onBottomPassed={this.showFixedMenu}
+          onBottomVisible={this.hideFixedMenu}
+          once={false}
+        >
+        <Segment
+          style={{ minHeight: '100vh' }}
+          vertical
+          inverted
+        >
+        <TopMenu />
+        </Segment>
+        </Visibility>
+
+        <Segment style={{ minHeight: '1100px' }} vertical>
+ 
+        </Segment>
+
       </div>
     );
   }
