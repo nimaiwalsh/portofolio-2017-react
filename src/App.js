@@ -15,6 +15,7 @@ import {
 } from 'semantic-ui-react';
 import FixedMenu from './components/FixedMenu';
 import TopMenu from './components/TopMenu';
+import TwitterFeed from './components/TwitterFeed';
 import './App.css';
 
 class App extends Component {
@@ -25,11 +26,7 @@ class App extends Component {
 
   hideFixedMenu = () => this.setState({ visibleMenu: false });
   showFixedMenu = () => this.setState({ visibleMenu: true });
-  // style = {
-  //   h1: {
-  //     marginTop: '2em',
-  //   },
-  // }
+
   render() {
     const { visibleMenu } = this.state;
     return (
@@ -41,17 +38,17 @@ class App extends Component {
           onBottomVisible={this.hideFixedMenu}
           once={false}
         >
-        <Segment
-          style={{ minHeight: '100vh' }}
-          vertical
-          inverted
-        >
-        <TopMenu />
-        </Segment>
+          <Segment
+            style={{ minHeight: '100vh' }}
+            vertical
+            inverted
+          >
+            <TopMenu />
+          </Segment>
         </Visibility>
 
         <Segment style={{ minHeight: '1100px' }} vertical>
- 
+          <TwitterFeed />
         </Segment>
 
       </div>
