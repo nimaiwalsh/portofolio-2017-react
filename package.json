@@ -1,9 +1,10 @@
 {
   "name": "intermediate-redux",
-  "home": "https://nimaiwalsh.github.io/portofolio-2017-react",
+  "homepage": "https://nimaiwalsh.github.io/portofolio-2017-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "get-twitter-bearer-token": "^1.0.0",
     "gh-pages": "^1.1.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
