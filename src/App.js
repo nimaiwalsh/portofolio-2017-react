@@ -11,11 +11,13 @@ import {
   List,
   Menu,
   Segment,
-  Visibility
+  Visibility,
+  Item
 } from 'semantic-ui-react';
 import FixedMenu from './components/FixedMenu';
 import TopMenu from './components/TopMenu';
 import TwitterFeed from './components/TwitterFeed';
+import WebIcons from './components/WebIcons';
 import './App.css';
 
 class App extends Component {
@@ -42,13 +44,32 @@ class App extends Component {
             style={{ minHeight: '100vh' }}
             vertical
             inverted
+            textAlign="center"
           >
             <TopMenu />
+            <Container text>
+              <Header
+                as='h1'
+                content='Nimai Walsh'
+                inverted
+                style={{ fontSize: '4em', fontWeight: 'normal', marginTop: '2em' }}
+              />
+              <Header
+                as='h2'
+                content='Front End Web Developer'
+                inverted
+                style={{ fontSize: '1.7em', fontWeight: 'normal' }}
+              />
+            </Container>
+            <Container verticalAlign='bottom'>
+              <Item>
+                <WebIcons />
+              </Item>
+            </Container>
           </Segment>
         </Visibility>
 
         <Segment style={{ minHeight: '1100px' }} vertical>
-          <TwitterFeed />
         </Segment>
 
       </div>
