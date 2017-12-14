@@ -16,8 +16,9 @@ import {
 } from 'semantic-ui-react';
 import FixedMenu from './components/FixedMenu';
 import TopMenu from './components/TopMenu';
-import TwitterFeed from './components/TwitterFeed';
 import WebIcons from './components/WebIcons';
+import TwitterFeed from './components/TwitterFeed';
+import WorkCard from './components/WorkCard';
 import './App.css';
 
 class App extends Component {
@@ -41,7 +42,7 @@ class App extends Component {
           once={false}
         >
           <Segment
-            style={{ minHeight: '100vh' }}
+            style={{ minHeight: '700px' }}
             vertical
             inverted
             textAlign="center"
@@ -61,15 +62,21 @@ class App extends Component {
                 style={{ fontSize: '1.7em', fontWeight: 'normal' }}
               />
             </Container>
-            <Container verticalAlign='bottom'>
-              <Item>
+            <Container>
+              <Item style={{ marginTop: '5em' }}>
                 <WebIcons />
+              </Item>
+              <Item>
+                <TwitterFeed />
               </Item>
             </Container>
           </Segment>
         </Visibility>
 
         <Segment style={{ minHeight: '1100px' }} vertical>
+          <Container>
+            <WorkCard />
+          </Container>
         </Segment>
 
       </div>

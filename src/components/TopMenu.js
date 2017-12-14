@@ -9,8 +9,8 @@ const TopMenu = () => {
         <Menu.Menu position='right'>
           <Menu.Item as='a' active>Home</Menu.Item>
           <Menu.Item as='a'>Work</Menu.Item>
-          <Menu.Item as='a'>Company</Menu.Item>
-          <Menu.Item as='a'>Careers</Menu.Item>
+          <Menu.Item as='a'>Resume</Menu.Item>
+          <Menu.Item as='a'>Contact</Menu.Item>
         </Menu.Menu>
       </Menu>
     </Container> 
