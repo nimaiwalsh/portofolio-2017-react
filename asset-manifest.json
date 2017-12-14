@@ -1,12 +1,18 @@
 {
   "main.css": "static/css/main.a660b978.css",
   "main.css.map": "static/css/main.a660b978.css.map",
-  "main.js": "static/js/main.b223e1bb.js",
-  "main.js.map": "static/js/main.b223e1bb.js.map",
+  "main.js": "static/js/main.1821c632.js",
+  "main.js.map": "static/js/main.1821c632.js.map",
+  "static/media/babel-icon.svg": "static/media/babel-icon.8ae3e3e3.svg",
+  "static/media/css3-icon.svg": "static/media/css3-icon.64cf8878.svg",
   "static/media/flags.png": "static/media/flags.9c74e172.png",
+  "static/media/html5-icon.svg": "static/media/html5-icon.0fbdf6b6.svg",
   "static/media/icons.eot": "static/media/icons.674f50d2.eot",
   "static/media/icons.svg": "static/media/icons.912ec66d.svg",
   "static/media/icons.ttf": "static/media/icons.b06871f2.ttf",
   "static/media/icons.woff": "static/media/icons.fee66e71.woff",
-  "static/media/icons.woff2": "static/media/icons.af7ae505.woff2"
+  "static/media/icons.woff2": "static/media/icons.af7ae505.woff2",
+  "static/media/javascript-icon.svg": "static/media/javascript-icon.475d681b.svg",
+  "static/media/react-icon.svg": "static/media/react-icon.05a3e30f.svg",
+  "static/media/webpack-icon.svg": "static/media/webpack-icon.16231c1c.svg"
 }
