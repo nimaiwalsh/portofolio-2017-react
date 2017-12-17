@@ -1,28 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Grid } from 'semantic-ui-react';
 import _ from 'lodash';
-import Projects from '../resources/projects.js';
 import WorkCard from './WorkCard';
 
-function renderCards() {
- return _.map(Projects, (p, key) => {
-  return (
-    <Grid.Column key={key}>
-      <WorkCard 
-        title={p.title}
-        description={p.description}
-        image={p.image}
-        built={p.builtwith}
-        github={p.github}
-        githsrc={p.githsrc}
-      />
-    </Grid.Column>
-  )
- });
+class WorkCardList extends Component {
+  renderCards() {
+   return _.map(this.props.project, (p, key) => {
+    return (
+      <Grid.Column key={key}>
+        <WorkCard 
+          title={p.title}
+          description={p.description}
+          image={p.image}
+          built={p.builtwith}
+          github={p.github}
+          githsrc={p.githsrc}
+        />
+      </Grid.Column>
+    )
+   });
+  }
+  render() {
+    return this.renderCards()
+  }  
 }
 
-const WorkCardList = () => {
-  return renderCards()
+function mapStateToProps(state) {
+  return { project: state.projectlist }
 }
 
-export default WorkCardList;
+export default connect(mapStateToProps)(WorkCardList) 

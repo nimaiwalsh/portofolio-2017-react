@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import Sample1Reducer from './reducer_reducer1';
+import ProjectList from './reducer_projectlist';
 
 const rootReducer = combineReducers({
-  sample1: Sample1Reducer,
+  projectlist: ProjectList,
 });
 
 export default rootReducer;
