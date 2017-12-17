@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
-import SearchBar from './containers/SearchBar';
 import {
-  Button,
   Container,
-  Divider,
   Grid,
   Header,
   Icon,
   Image,
-  List,
-  Menu,
   Segment,
   Visibility,
   Item
@@ -18,7 +13,7 @@ import FixedMenu from './components/FixedMenu';
 import TopMenu from './components/TopMenu';
 import WebIcons from './components/WebIcons';
 import TwitterFeed from './components/TwitterFeed';
-import WorkCard from './components/WorkCard';
+import WorkCardList from './components/WorkCardList';
 import './App.css';
 
 class App extends Component {
@@ -73,9 +68,12 @@ class App extends Component {
           </Segment>
         </Visibility>
 
-        <Segment style={{ minHeight: '1100px' }} vertical>
+        <Segment vertical>
           <Container>
-            <WorkCard />
+            <Header as='h1' content='Work' style={{marginTop: '1em', fontSize: '3em'}} />
+            <Grid doubling columns={3} stackable>
+              <WorkCardList />
+            </Grid>
           </Container>
         </Segment>
 

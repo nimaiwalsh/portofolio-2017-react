@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
+const CONSUMER_KEY = 'u9NAGnkkxRKhaHZUYBvfh3mnq';
+const CONSUMER_SECRET = '3hzFIcvt1GRgFLPkvon5pMcPTbZHnNOn11DNqBqJaGdMaHwmcr';
 const TWITTER_BEARER_TOKEN = 'AAAAAAAAAAAAAAAAAAAAAG9p3gAAAAAAK86PnIdiZcbh4ITEFG1FiKI1fxA%3DO4IScQEnyl4KXa1JfbIXwKevpJFBkoEe6Zq7XKAOH2E7sis9Ui';
 
 class TwitterFeed extends Component {
   componentDidMount() {
-    const request = require("request");
-    const twitter_api = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-    const bearer_token = TWITTER_BEARER_TOKEN;
-    var options = {
-        method: 'GET',
-        url: twitter_api,
-        qs: {
-            "screen_name": "nimaiwalsh"
-        },
-        json: true,
-        headers: {
-            "Authorization": "Bearer " + bearer_token
-        }
-    };
-
-    request(options, function(error, response, body) {
-      console.dir(body);
+    const Twitter = require('twitter');
+    const client = new Twitter({
+      consumer_key: CONSUMER_KEY,
+      consumer_secret: CONSUMER_SECRET,
+      bearer_token: TWITTER_BEARER_TOKEN,
+    });
+    const params = {screen_name: 'nimaiwalsh'};
+    client.get('statuses/user_timeline', params, function(error, tweets, response) {
+      if (!error) {
+          console.log(tweets);
+      } else {
+          throw error
+      }
     });
   }
 

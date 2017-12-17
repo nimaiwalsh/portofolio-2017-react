@@ -1,28 +1,28 @@
 import React from 'react';
 import { Card, Image, Icon } from 'semantic-ui-react';
 
-const WorkCard = () => {
+const WorkCard = ({ title, description, image, built, github, githsrc }) => {
   return (
     <Card fluid>
-      <Image src='' />
+      <Image src={image} />
       <Card.Content>
         <Card.Header>
-          Header
+          { title }
         </Card.Header>
         <Card.Meta>
           <span className="builtWith">
-            Built with html, css, react
+            Built with: { built }
           </span>
         </Card.Meta>
         <Card.Description>
-          Description of the card
+          { description }
         </Card.Description>
-        <Card.Content extra>
-          <a>
-            <Icon name='gitHub' />
-            View on GitHub
-          </a>
-        </Card.Content>
+      </Card.Content>
+      <Card.Content extra>
+        <a href={github} target='_blank'>
+          <Icon name='github' />
+          View on github
+        </a>
       </Card.Content>
     </Card>
   )

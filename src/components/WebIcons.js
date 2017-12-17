@@ -13,7 +13,6 @@ const icons = {
 
 const renderIcons = () => {
   return _.map(icons, (value, key) => {
-    console.log(value);
     return (
       <List.Item key={key}>
         <Image src={value} style={{height: '100px'}} />
