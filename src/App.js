@@ -27,6 +27,7 @@ class App extends Component {
 
   render() {
     const { visibleMenu } = this.state;
+    const { segment, containerhead, header } = this.styles;
     return (
       <div className="App">
         { visibleMenu ? <FixedMenu /> : null }
@@ -57,29 +58,67 @@ class App extends Component {
                 style={{ fontSize: '1.7em', fontWeight: 'normal' }}
               />
             </Container>
-            <Container>
-              <Item style={{ marginTop: '5em' }}>
-                <WebIcons />
-              </Item>
-              <Item>
-                <TwitterFeed />
-              </Item>
+            <Container style={{ marginTop: '10em' }}>
+              <WebIcons />
             </Container>
           </Segment>
         </Visibility>
 
-        <Segment vertical>
+        <Segment vertical style={segment}>
+          <div style={containerhead}>
+            <Container>
+              <Header as='h1' content='Work' style={header}/>
+            </Container>
+          </div>
           <Container>
-            <Header as='h1' content='Work' style={{marginTop: '1em', fontSize: '3em'}} />
             <Grid doubling columns={3} stackable>
               <WorkCardList />
             </Grid>
           </Container>
         </Segment>
 
+        <Segment vertical style={segment}>
+          <div style={containerhead}>
+            <Container>
+              <Header as='h1' content='Contact me' style={header}/>
+            </Container>
+          </div>
+          <Container>
+            <Grid columns={2} stackable>
+              <Grid.Column>One</Grid.Column>
+              <Grid.Column>
+                <Item>
+                  <TwitterFeed />
+                </Item>
+              </Grid.Column>
+            </Grid>
+          </Container>
+        </Segment>
+
+        <Segment inverted vertical style={{padding: '5em'}}>
+
+        </Segment>
       </div>
     );
   }
+
+  styles = {
+    segment: {
+      paddingTop: '0',
+      paddintBottom: '2em',
+      backgroundColor: '#FDFDFD',      
+    },
+    containerhead: {
+      backgroundColor: '#FFFFFF',
+      marginBottom: '3em',
+      padding: '2em 0',
+      boxShadow: '0 7px 10px 0 rgba(0,0,0,.04), 0 20px 20px 0 rgba(0,0,0,.02)',
+    },
+    header: {
+      fontSize: '3.5em'
+    }
+  }
+
 }
 
 export default App;
