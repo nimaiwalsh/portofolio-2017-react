@@ -12,8 +12,9 @@ import {
 import FixedMenu from './components/FixedMenu';
 import TopMenu from './components/TopMenu';
 import WebIcons from './components/WebIcons';
-import TwitterFeed from './components/TwitterFeed';
+// import TwitterFeed from './components/TwitterFeed';
 import WorkCardList from './components/WorkCardList';
+import ContactForm from './components/ContactForm';
 import './App.css';
 
 class App extends Component {
@@ -85,10 +86,12 @@ class App extends Component {
           </div>
           <Container>
             <Grid columns={2} stackable>
-              <Grid.Column>One</Grid.Column>
+              <Grid.Column>
+                <ContactForm />
+              </Grid.Column>
               <Grid.Column>
                 <Item>
-                  <TwitterFeed />
+                  {/* <TwitterFeed /> */}
                 </Item>
               </Grid.Column>
             </Grid>
