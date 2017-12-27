@@ -87,12 +87,13 @@ class App extends Component {
           <Container>
             <Grid columns={2} stackable>
               <Grid.Column>
+                <Segment color='blue'>
+                    <p>Hi, I'm still working on the form submission. Please contact me at <a href="mailto:nimai.walsh@gmail.com">nimai.walsh@gmail.com</a></p>
+                </Segment>
                 <ContactForm />
               </Grid.Column>
-              <Grid.Column>
-                <Item>
-                  {/* <TwitterFeed /> */}
-                </Item>
+              <Grid.Column style={{paddingTop: '36px'}}>
+
               </Grid.Column>
             </Grid>
           </Container>
@@ -108,12 +109,12 @@ class App extends Component {
   styles = {
     segment: {
       paddingTop: '0',
-      paddintBottom: '2em',
+      paddingBottom: '5em',
       backgroundColor: '#FDFDFD',      
     },
     containerhead: {
       backgroundColor: '#FFFFFF',
-      marginBottom: '3em',
+      marginBottom: '5em',
       padding: '2em 0',
       boxShadow: '0 7px 10px 0 rgba(0,0,0,.04), 0 20px 20px 0 rgba(0,0,0,.02)',
     },
