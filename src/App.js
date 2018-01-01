@@ -9,7 +9,7 @@ import {
   Visibility,
   Item
 } from 'semantic-ui-react';
-import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, Element } from 'react-scroll'
 import FixedMenu from './components/FixedMenu';
 import TopMenu from './components/TopMenu';
 import WebIcons from './components/WebIcons';
@@ -27,16 +27,11 @@ class App extends Component {
   hideFixedMenu = () => this.setState({ visibleMenu: false });
   showFixedMenu = () => this.setState({ visibleMenu: true });
 
-  componentDidMount() {
-    scrollSpy.update()
-  }
-
   render() {
     const { visibleMenu } = this.state;
     const { segment, containerhead, header } = this.styles;
     return (
       <div className="App">
-      <div className="element" id="containerElement" >
         { visibleMenu ? <FixedMenu /> : null }
 
         <Visibility
@@ -45,7 +40,7 @@ class App extends Component {
           once={false}
           offset={[40, 40]}
         >
-          <Element name="Home"/>
+        <Element name="home" >
           <Segment
             style={{ minHeight: '700px' }}
             vertical
@@ -72,13 +67,14 @@ class App extends Component {
               <WebIcons />
             </Container>
           </Segment>
+          </Element>
         </Visibility>
       
+        <Element name="work">
         <Segment vertical style={segment}>
-          <Element name="Work" />
           <div style={containerhead}>
             <Container>
-                <Header as='h1' content='Work' style={header}/>
+                <Header as='h1' content='Work' style={header} />
             </Container>
           </div>
           <Container>
@@ -87,15 +83,16 @@ class App extends Component {
             </Grid>
           </Container>
         </Segment>
+        </Element>
 
-       
+        <Element name="contact-me">
         <Segment vertical style={segment}>
-          <Element name="Contact" />
           <div style={containerhead}>
             <Container>
-                <Header as='h1' content='Contact me' style={header}/>
+                <Header as='h1' content='Contact me' style={header} />
             </Container>
           </div>
+         
           <Container>
             <Grid columns={2} stackable>
               <Grid.Column>
@@ -105,17 +102,17 @@ class App extends Component {
                 <ContactForm />
               </Grid.Column>
               <Grid.Column style={{paddingTop: '36px'}}>
-
+                  dffdff
               </Grid.Column>
             </Grid>
           </Container>
         </Segment>
+        </Element>
 
-        <Segment inverted vertical style={{padding: '5em'}}>
+        <Segment inverted vertical style={{padding: '5em'}} style={{minHeight: '400px'}}>
 
         </Segment>
-        
-      </div>
+
       </div>
     );
   }
