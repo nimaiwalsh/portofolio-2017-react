@@ -27,11 +27,16 @@ class App extends Component {
   hideFixedMenu = () => this.setState({ visibleMenu: false });
   showFixedMenu = () => this.setState({ visibleMenu: true });
 
+  componentDidMount() {
+    scrollSpy.update()
+  }
+
   render() {
     const { visibleMenu } = this.state;
     const { segment, containerhead, header } = this.styles;
     return (
       <div className="App">
+      <div className="element" id="containerElement" >
         { visibleMenu ? <FixedMenu /> : null }
 
         <Visibility
@@ -70,7 +75,7 @@ class App extends Component {
         </Visibility>
       
         <Segment vertical style={segment}>
-          <Element name="Work" style={{height: '20px'}}/>
+          <Element name="Work" />
           <div style={containerhead}>
             <Container>
                 <Header as='h1' content='Work' style={header}/>
@@ -85,7 +90,7 @@ class App extends Component {
 
        
         <Segment vertical style={segment}>
-          <Element name="Contact" style={{height: '20px'}}/>
+          <Element name="Contact" />
           <div style={containerhead}>
             <Container>
                 <Header as='h1' content='Contact me' style={header}/>
@@ -109,6 +114,8 @@ class App extends Component {
         <Segment inverted vertical style={{padding: '5em'}}>
 
         </Segment>
+        
+      </div>
       </div>
     );
   }

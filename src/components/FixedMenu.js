@@ -4,8 +4,8 @@ import { Link } from 'react-scroll'
 
 export default class FixedMenu extends Component {
 
-  displayClass() {
-    console.log()
+  setActive() {
+    console.log('active')
   }
 
   render() {
@@ -17,10 +17,10 @@ export default class FixedMenu extends Component {
             <Link activeClass="active" className= "home" to="Home" spy={true} smooth={true} duration={500} >
               <Menu.Item link>Home</Menu.Item>
             </Link>
-            <Link activeClass="active" className="work" to="Work" spy={true} smooth={true} duration={500} >
+            <Link activeClass="active" className="work" offset={-30} to="Work" spy={true} smooth={true} duration={500} >
               <Menu.Item link>Work</Menu.Item>
             </Link>
-            <Link activeClass="active" className="contact" to="Contact" spy={true} smooth={true} duration={500} >
+            <Link activeClass="active" className="contact" offset={-30} to="Contact" spy={true} smooth={true} duration={500} onSetActive={this.setActive}>
               <Menu.Item link>Contact</Menu.Item>
             </Link>
           </Menu.Menu>
