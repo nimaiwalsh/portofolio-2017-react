@@ -9,6 +9,7 @@ import {
   Visibility,
   Item
 } from 'semantic-ui-react';
+import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import FixedMenu from './components/FixedMenu';
 import TopMenu from './components/TopMenu';
 import WebIcons from './components/WebIcons';
@@ -37,7 +38,9 @@ class App extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomVisible={this.hideFixedMenu}
           once={false}
+          offset={[40, 40]}
         >
+          <Element name="Home"/>
           <Segment
             style={{ minHeight: '700px' }}
             vertical
@@ -46,6 +49,7 @@ class App extends Component {
           >
             <TopMenu />
             <Container text>
+              
               <Header
                 as='h1'
                 content='Nimai Walsh'
@@ -64,11 +68,12 @@ class App extends Component {
             </Container>
           </Segment>
         </Visibility>
-
+      
         <Segment vertical style={segment}>
+          <Element name="Work" style={{height: '20px'}}/>
           <div style={containerhead}>
             <Container>
-              <Header as='h1' content='Work' style={header}/>
+                <Header as='h1' content='Work' style={header}/>
             </Container>
           </div>
           <Container>
@@ -78,10 +83,12 @@ class App extends Component {
           </Container>
         </Segment>
 
+       
         <Segment vertical style={segment}>
+          <Element name="Contact" style={{height: '20px'}}/>
           <div style={containerhead}>
             <Container>
-              <Header as='h1' content='Contact me' style={header}/>
+                <Header as='h1' content='Contact me' style={header}/>
             </Container>
           </div>
           <Container>
@@ -110,7 +117,8 @@ class App extends Component {
     segment: {
       paddingTop: '0',
       paddingBottom: '5em',
-      backgroundColor: '#FDFDFD',      
+      backgroundColor: '#FDFDFD',
+      minHeight: '700px'      
     },
     containerhead: {
       backgroundColor: '#FFFFFF',
