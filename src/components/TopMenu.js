@@ -2,17 +2,6 @@ import React from 'react';
 import { Container, Menu } from 'semantic-ui-react';
 import { Link } from 'react-scroll'
 
-function handleOnset() {
-  console.log('test')
-}
-
-function handleOnset2() {
-  console.log('test2')
-}
-
-function handleOnset3() {
-  console.log('test3')
-}
 const TopMenu = () => {
   return (
     <Container>

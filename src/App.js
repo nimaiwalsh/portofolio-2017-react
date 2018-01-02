@@ -3,13 +3,14 @@ import {
   Container,
   Grid,
   Header,
-  Icon,
-  Image,
   Segment,
   Visibility,
-  Item
+  Item,
+  Transition
 } from 'semantic-ui-react';
-import { Link, Element } from 'react-scroll'
+import { Element } from 'react-scroll';
+import Waypoint from 'react-waypoint';
+
 import FixedMenu from './components/FixedMenu';
 import TopMenu from './components/TopMenu';
 import WebIcons from './components/WebIcons';
@@ -26,6 +27,10 @@ class App extends Component {
 
   hideFixedMenu = () => this.setState({ visibleMenu: false });
   showFixedMenu = () => this.setState({ visibleMenu: true });
+
+  enterScreen() {
+    console.log('Asset entered screen')
+  }
 
   render() {
     const { visibleMenu } = this.state;
@@ -73,8 +78,8 @@ class App extends Component {
         <Element name="work">
         <Segment vertical style={segment}>
           <div style={containerhead}>
-            <Container>
-                <Header as='h1' content='Work' style={header} />
+            <Container >
+              <Header as='h1' content='Work' style={header} />
             </Container>
           </div>
           <Container>
@@ -89,10 +94,9 @@ class App extends Component {
         <Segment vertical style={segment}>
           <div style={containerhead}>
             <Container>
-                <Header as='h1' content='Contact me' style={header} />
+              <Header as='h1' content='Contact me' style={header} />
             </Container>
           </div>
-         
           <Container>
             <Grid columns={2} stackable>
               <Grid.Column>
@@ -109,8 +113,8 @@ class App extends Component {
         </Segment>
         </Element>
 
-        <Segment inverted vertical style={{padding: '5em'}} style={{minHeight: '400px'}}>
-
+        <Segment inverted vertical style={{minHeight: '200px'}}>
+          FOOTER
         </Segment>
 
       </div>
