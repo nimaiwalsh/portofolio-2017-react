@@ -29,7 +29,7 @@ export default function() {
       description: 'A basic search app that uses the Wiki API to provide answers',
       image: require('../resources/img/project/wiki-viewer-min.jpeg'),
       builtwith: 'HTML, CSS, JavaScript',
-      github: 'https://nimaiwalsh.github.io/twitchAPI/',
+      github: 'https://nimaiwalsh.github.io/wikiViewer/',
       githsrc: 'https://github.com/nimaiwalsh/wikiViewer',
     },
     five: {
@@ -61,7 +61,7 @@ export default function() {
       description: 'Search for your city and add multiple cities to a list. The list contains a chart for Temp, Humidity and Air Pressure every 3 hours for 5 days.',
       image: require('../resources/img/project/weather-forecast-react-min.jpeg'),
       builtwith: 'HTML, CSS, React, Redux',
-      github: 'https://nimaiwalsh.github.io/Pomodora-Clock/',
+      github: 'https://nimaiwalsh.github.io/weather-app-react-redux/',
       githsrc: 'https://github.com/nimaiwalsh/weather-app-react-redux',
     }
   }

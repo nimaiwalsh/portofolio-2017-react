@@ -11,11 +11,7 @@ export default class WorkCard extends Component {
   render() {
     const { title, description, image, built, github, githsrc } = this.props
     return (
-      <Waypoint 
-        onEnter={() => this.setState({display: true})}
-      >
-      <div>
-      <Transition visible={this.state.display} animation='scale' duration={500}>
+
       <Card fluid>
         <Image src={image} />
         <Card.Content>
@@ -32,21 +28,26 @@ export default class WorkCard extends Component {
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <a href={github} target='_blank'>
-            <Button color={'blue'} icon labelPosition='left'>
+          <Waypoint onEnter={() => this.setState({display: true})}>
+          <div>
+            <Transition visible={this.state.display} animation='scale' duration={1000}>
+            <a href={github} target='_blank'>
+            <Button color={'blue'} icon labelPosition='left' fluid>
               <Icon name='github' />
-              View on Github
+                View Project
             </Button>
-          </a>
-          <a href={githsrc} target='_blank'>
-            <Icon name='github' />
-            View source code
-          </a>
+            </a>
+            </Transition>
+          </div>
+          </Waypoint>
+          <div style={{textAlign: 'center'}}>
+            <a href={githsrc} target='_blank'>
+              <Icon name='github' />
+              View source code
+            </a>
+          </div>
         </Card.Content>
       </Card>
-      </Transition>
-      </div>
-      </Waypoint>
     )
   }
 }

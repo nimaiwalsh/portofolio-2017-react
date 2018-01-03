@@ -17,6 +17,7 @@ import WebIcons from './components/WebIcons';
 // import TwitterFeed from './components/TwitterFeed';
 import WorkCardList from './components/WorkCardList';
 import ContactForm from './components/ContactForm';
+import TwitterTimeline from './components/TwitterTimeline';
 import './App.css';
 
 class App extends Component {
@@ -106,7 +107,7 @@ class App extends Component {
                 <ContactForm />
               </Grid.Column>
               <Grid.Column style={{paddingTop: '36px'}}>
-                  dffdff
+                <TwitterTimeline />
               </Grid.Column>
             </Grid>
           </Container>
@@ -114,7 +115,7 @@ class App extends Component {
         </Element>
 
         <Segment inverted vertical style={{minHeight: '200px'}}>
-          FOOTER
+ 
         </Segment>
 
       </div>

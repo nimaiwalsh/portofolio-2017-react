@@ -12,6 +12,7 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14",
     "react-scroll": "^1.7.4",
+    "react-twitter-widgets": "^1.7.1",
     "react-waypoint": "^7.3.4",
     "redux": "^3.7.2",
     "redux-form": "^7.2.0",
