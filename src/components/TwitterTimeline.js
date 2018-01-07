@@ -7,11 +7,11 @@ export default class TwitterTimeline extends Component {
       <Timeline 
         dataSource={{
         sourceType: 'profile',
-        screenName: 'twitterdev'}}
+        screenName: 'nimaiwalsh'}}
         options={{
-        username: 'TwitterDev',
+        username: 'NimaiWalsh',
         height: '400',
-        width: '400'
+        width: '100%'
         }}
         onLoad={() => console.log('Timeline is loaded!')}
       />

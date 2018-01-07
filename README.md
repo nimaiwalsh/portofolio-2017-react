@@ -1,8 +1,2 @@
-## CRA - Redux - Router
-Starter boiler plate with starter template using:
-
-#React
-#Redux
-#React-Redux
-#REDUX-Promise
-#Semantic-UI-React
+## Portfolio 2017
+My Web Development portfolio created with React and Semantic-UI-React

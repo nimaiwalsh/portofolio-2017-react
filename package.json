@@ -1,6 +1,5 @@
 {
-  "name": "intermediate-redux",
-  "homepage": "https://nimaiwalsh.github.io/portofolio-2017-react",
+  "name": "portfolio-2017",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
