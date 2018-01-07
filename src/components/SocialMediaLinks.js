@@ -19,9 +19,9 @@ const icons = {
 
 const renderIcons = () => {
   return (
-    _.map(icons, (icon) => {
+    _.map(icons, (icon, key) => {
       return (
-        <a href={icon.url} target='_blank'><Icon name={icon.name} size='huge' /></a>
+        <a href={icon.url} target='_blank' key={key}><Icon name={icon.name} size='huge' /></a>
       )
     })
   )

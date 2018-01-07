@@ -5,8 +5,6 @@ import {
   Header,
   Segment,
   Visibility,
-  Item,
-  Transition
 } from 'semantic-ui-react';
 import { Element } from 'react-scroll';
 import Waypoint from 'react-waypoint';
@@ -107,7 +105,7 @@ class App extends Component {
                 </Segment>
                 <ContactForm />
               </Grid.Column>
-              <Grid.Column centered>
+              <Grid.Column>
                 <TwitterTimeline />
               </Grid.Column>
             </Grid>
@@ -115,7 +113,11 @@ class App extends Component {
         </Segment>
         </Element>
 
-        <Segment inverted vertical textAlign='center' vertical style={{minHeight: '200px', paddingTop: '70px'}}>
+        <Segment 
+          inverted
+          vertical 
+          textAlign='center' 
+          style={{minHeight: '200px', paddingTop: '70px'}}>
           <SocialMediaLinks />
         </Segment>
 
