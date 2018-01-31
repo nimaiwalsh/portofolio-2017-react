@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, List } from 'semantic-ui-react';
 import _ from 'lodash';
+import { css, keyframes } from 'react-emotion';
 
 const icons = {
   css: require('../resources/img/css3-icon.svg'),
@@ -14,9 +15,9 @@ const icons = {
 const renderIcons = () => {
   return _.map(icons, (value, key) => {
     return (
-      <List.Item key={key}>
-        <Image src={value} style={{height: '100px'}} />
-        <List.Content style={{display: 'block'}}>
+      <List.Item key={key} className={styles}>
+        <Image src={value} />
+        <List.Content>
           <span style={{textTransform: 'uppercase'}}>{key}</span>
         </List.Content>
       </List.Item>
@@ -29,3 +30,27 @@ const WebIcons = () => {
 }
 
 export default WebIcons
+
+const styles = css({
+  '& img': {
+    height: '100px',
+    marginBottom: '10px !important',
+    borderBorrom: '2px solid white',
+    transition: '1s',
+  },
+  '& img:hover': {
+    transform: 'rotate(20deg)'
+  },
+  '& .content': {
+    display: 'block !important'
+  },
+  '& .content > span': {
+    fontSize: '1.3rem',
+    opacity: '0',
+    transition: '1s',
+  },
+  '&:hover > .content > span': {
+    opacity: '1',
+  },
+})
+
