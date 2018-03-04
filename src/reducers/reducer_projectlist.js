@@ -1,5 +1,13 @@
 export default function() {
-  return {
+  return {  
+    fccrecipebox: {
+      title: 'FCC Recipe Box',
+      description: 'Add/Remove recipes and edit current recipes. It stores recipes in cache using your browser local storage.',
+      image: require('../resources/img/project/recipe-box-react-min.jpeg'),
+      builtwith: 'React, Redux, Emotion.js',
+      github: 'https://nimaiwalsh.github.io/fcc-recipe-box/',
+      githsrc: 'https://github.com/nimaiwalsh/fcc-recipe-box',
+    },
     fccleaderboard: {
       title: 'FCC Leaderboard',
       description: 'View the the top 100 FreeCodeCamp contributors. View the top scorers of all time or in the past 30 days',

@@ -7,7 +7,6 @@ import {
   Visibility,
 } from 'semantic-ui-react';
 import { Element } from 'react-scroll';
-import Waypoint from 'react-waypoint';
 
 import FixedMenu from './components/FixedMenu';
 import TopMenu from './components/TopMenu';
